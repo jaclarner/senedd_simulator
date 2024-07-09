@@ -65,6 +65,17 @@ let constituencyPairings = [
         "Ynys Môn": {"Labour": 24, "Conservatives": 22, "PlaidCymru": 43, "LibDems": 2, "Greens": 2, "Reform": 2, "Other": 5},
     };
 
+// Estimated baseline national vote share
+const baselineNationalVotes = {
+    "Labour": 38.4,
+    "Conservatives": 25.1,
+    "PlaidCymru": 22.4,
+    "LibDems": 4.2,
+    "Greens": 1.6,
+    "Reform": 6.1,
+    "Other": 2.2
+};
+
 // D'Hondt method implementation
 function dHondt(votes, seats) {
     const parties = Object.keys(votes);
@@ -153,8 +164,13 @@ function combineConstituencyVotes(votes1, votes2) {
 function applyUniformSwing(baselineVotes, nationalVotes) {
     const swingVotes = {};
     for (const party in baselineVotes) {
-        const swing = nationalVotes[party] - baselineVotes[party];
-        swingVotes[party] = Math.max(0, baselineVotes[party] + swing);
+        const nationalSwing = nationalVotes[party] - baselineNationalVotes[party];
+        swingVotes[party] = Math.max(0, baselineVotes[party] + nationalSwing);
+    }
+    // Normalize the votes to ensure they sum to 100
+    const totalVotes = Object.values(swingVotes).reduce((sum, value) => sum + value, 0);
+    for (const party in swingVotes) {
+        swingVotes[party] = (swingVotes[party] / totalVotes) * 100;
     }
     return swingVotes;
 }

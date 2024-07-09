@@ -44,7 +44,7 @@ let constituencyPairings = [
         "Cardiff South and Penarth": {"Labour": 42, "Conservatives": 20, "PlaidCymru": 15, "LibDems": 4, "Greens": 9, "Reform": 6, "Other": 4},
         "Cardiff West": {"Labour": 44, "Conservatives": 17, "PlaidCymru": 22, "LibDems": 3, "Greens": 7, "Reform": 1, "Other": 6},
         "Ceredigion Preseli": {"Labour": 17, "Conservatives": 20, "PlaidCymru": 50, "LibDems": 18, "Greens": 2, "Reform": 1, "Other": 2},
-        "Clwyd East": {"Labour": 40, "Conservatives": 38, "PlaidCymru": 10, "LibDems": 4, "Greens": 2, "Reform": 1 "Other": 5},
+        "Clwyd East": {"Labour": 40, "Conservatives": 38, "PlaidCymru": 10, "LibDems": 4, "Greens": 2, "Reform": 1, "Other": 5},
         "Clwyd North": {"Labour": 39, "Conservatives": 39, "PlaidCymru": 12, "LibDems": 3, "Greens": 3, "Reform": 3, "Other": 2},
         "Dwyfor Meirionnydd": {"Labour": 18, "Conservatives": 17, "PlaidCymru": 47, "LibDems": 3, "Greens": 4, "Reform": 2, "Other": 9},
         "Gower": {"Labour": 42, "Conservatives": 25, "PlaidCymru": 16, "LibDems": 3, "Greens": 5, "Reform": 6, "Other": 3},

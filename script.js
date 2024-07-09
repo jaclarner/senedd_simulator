@@ -32,12 +32,12 @@ let constituencyPairings = [
 // Baseline vote shares for each sub-constituency (estimates only to be improved later)
     const baselineVotes = {
         "Aberafan Maesteg": {"Labour": 46, "Conservatives": 14, "PlaidCymru": 23, "LibDems": 3, "Greens": 3, "Reform": 4, "Other": 7},
-        "Alyn and Deeside": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
-        "Bangor Aberconwy": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
-        "Blaenau Gwent and Rhymney": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
-        "Brecon, Radnor and Cwm Tawe": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
-        "Bridgend": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
-        "Caerfyrddin": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
+        "Alyn and Deeside": {"Labour": 41, "Conservatives": 32, "PlaidCymru": 9, "LibDems": 5, "Greens": 3, "Reform": 8, "Other": 2},
+        "Bangor Aberconwy": {"Labour": 23, "Conservatives": 25, "PlaidCymru": 31, "LibDems": 4, "Greens": 4, "Reform": 10, "Other": 3},
+        "Blaenau Gwent and Rhymney": {"Labour": 50, "Conservatives": 13, "PlaidCymru": 20, "LibDems": 4, "Greens": 2, "Reform": 9, "Other": 2},
+        "Brecon, Radnor and Cwm Tawe": {"Labour": 23, "Conservatives": 32, "PlaidCymru": 12, "LibDems": 20, "Greens": 7, "Reform": 5, "Other": 1},
+        "Bridgend": {"Labour": 41, "Conservatives": 25, "PlaidCymru": 15, "LibDems": 2, "Greens": 2, "Reform": 8, "Other": 7},
+        "Caerfyrddin": {"Labour": 22, "Conservatives": 25, "PlaidCymru": 36, "LibDems": 4, "Greens": 5, "Reform": 5, "Other": 3},
         "Caerphilly": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
         "Cardiff East": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
         "Cardiff North": {"Labour": 30, "Conservatives": 25, "PlaidCymru": 20, "LibDems": 10, "Greens": 5, "Reform": 5, "Other": 5},
@@ -62,7 +62,7 @@ let constituencyPairings = [
         "Torfaen": {"Labour": 28, "Conservatives": 27, "PlaidCymru": 22, "LibDems": 9, "Greens": 6, "Reform": 4, "Other": 4},
         "Vale of Glamorgan": {"Labour": 28, "Conservatives": 27, "PlaidCymru": 22, "LibDems": 9, "Greens": 6, "Reform": 4, "Other": 4},
         "Wrexham": {"Labour": 28, "Conservatives": 27, "PlaidCymru": 22, "LibDems": 9, "Greens": 6, "Reform": 4, "Other": 4},
-        "Ynys Môn": {"Labour": 28, "Conservatives": 27, "PlaidCymru": 22, "LibDems": 9, "Greens": 6, "Reform": 4, "Other": 4},
+        "Ynys Môn": {"Labour": 24, "Conservatives": 22, "PlaidCymru": 43, "LibDems": 2, "Greens": 2, "Reform": 2, "Other": 5},
     };
 
 // D'Hondt method implementation

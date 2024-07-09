@@ -327,8 +327,9 @@ function displayResults(allResults) {
 
     html += '</table>';
 
-    html += `
+html += `
     <h2>Seat Allocation Process</h2>
+    <p>Select a constituency from the dropdown menu. Use the slider below to see how seats are allocated round by round. The table shows the quotient for each party and the number of seats they have at each stage.</p>
     <select id="constituencySelector">
         ${allResults.map(result => `<option value="${result.constituency}">${result.constituency}</option>`).join('')}
     </select>

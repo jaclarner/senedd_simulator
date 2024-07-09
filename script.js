@@ -9,25 +9,18 @@ const subConstituencies = [
     "Vale of Glamorgan", "Wrexham", "Ynys Môn"
 ];
 
-// Default constituency pairings (just guessing here)
-let constituencyPairings = [
-    ["Alyn and Deeside", "Clwyd East"],
-    ["Wrexham", "Montgomeryshire and Glyndwr"],
-    ["Bangor Aberconwy", "Clwyd North"],
-    ["Ynys Môn", "Dwyfor Meirionnydd"],
-    ["Ceredigion Preseli", "Mid and South Pembrokeshire"],
-    ["Caerfyrddin", "Llanelli"],
-    ["Gower", "Swansea West"],
-    ["Neath and Swansea East", "Aberafan Maesteg"],
-    ["Bridgend", "Rhondda and Ogmore"],
-    ["Merthyr Tydfil and Aberdare", "Pontypridd"],
-    ["Cardiff West", "Vale of Glamorgan"],
-    ["Cardiff South and Penarth", "Cardiff East"],
-    ["Caerphilly", "Cardiff North"],
-    ["Blaenau Gwent and Rhymney", "Torfaen"],
-    ["Newport East", "Newport West and Islwyn"],
-    ["Brecon, Radnor and Cwm Tawe", "Monmouthshire"]
-];
+function generateRandomPairings() {
+    let unpaired = [...subConstituencies];
+    let pairings = [];
+    while (unpaired.length > 1) {
+        const index1 = Math.floor(Math.random() * unpaired.length);
+        const constituency1 = unpaired.splice(index1, 1)[0];
+        const index2 = Math.floor(Math.random() * unpaired.length);
+        const constituency2 = unpaired.splice(index2, 1)[0];
+        pairings.push([constituency1, constituency2]);
+    }
+    return pairings;
+}
 
 // Baseline vote shares for each sub-constituency (estimates only to be improved later)
         const baselineVotes = {
@@ -138,6 +131,9 @@ document.getElementById('voteForm').addEventListener('submit', function(e) {
 
 // Calculate results for all constituencies
 function calculateAllConstituencies(nationalVotes) {
+    if (!constituencyPairings || constituencyPairings.length === 0) {
+        constituencyPairings = generateRandomPairings();
+    }
     return constituencyPairings.map(pair => {
         const constituencyName = pair.join(' + ');
         const constituencyVotes = applyUniformSwing(
@@ -402,6 +398,9 @@ document.getElementById('openPairingModal').addEventListener('click', openPairin
 document.getElementById('savePairings').addEventListener('click', savePairings);
 
 function openPairingModal() {
+    if (!constituencyPairings || constituencyPairings.length === 0) {
+        constituencyPairings = generateRandomPairings();
+    }
     document.getElementById('pairingModal').style.display = 'block';
     populatePairingOptions();
 }
@@ -438,4 +437,10 @@ function populatePairingOptions() {
 
 document.querySelector('.close').addEventListener('click', function() {
     document.getElementById('pairingModal').style.display = 'none';
+});
+
+document.getElementById('randomPairings').addEventListener('click', function() {
+    constituencyPairings = generateRandomPairings();
+    populatePairingOptions();
+    alert('Random pairings generated. Please review in the pairing modal.');
 });

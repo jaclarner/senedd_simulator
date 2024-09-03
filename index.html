@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senedd Election Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="logo.png" alt="Senedd Election Simulator Logo" class="logo">
+            <div>
+                <h1>Senedd Election Simulator</h1>
+                <h2>Created by Jac Larner</h2>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <form id="voteForm">
+                <h2>Enter National Vote Percentages</h2>
+                <div id="partyInputs">
+                    <label>Labour: <input type="number" name="Labour" required min="0" max="100" step="0.1"></label>
+                    <label>Conservatives: <input type="number" name="Conservatives" required min="0" max="100" step="0.1"></label>
+                    <label>Plaid Cymru: <input type="number" name="PlaidCymru" required min="0" max="100" step="0.1"></label>
+                    <label>Liberal Democrats: <input type="number" name="LibDems" required min="0" max="100" step="0.1"></label>
+                    <label>Greens: <input type="number" name="Greens" required min="0" max="100" step="0.1"></label>
+                    <label>Reform: <input type="number" name="Reform" required min="0" max="100" step="0.1"></label>
+                    <label>Abolish: <input type="number" name="Abolish" required min="0" max="100" step="0.1"></label>
+                    <label>Other: <input type="number" name="Other" required min="0" max="100" step="0.1"></label>
+                </div>
+                <p id="totalPercentage">Total: 0%</p>
+            </form>
+            <button id="openPairingModal">Edit Constituency Pairings</button>
+        </div>
+        <div id="results">
+        </div>
+    </div>
+    <div id="pairingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Constituency Pairings</h2>
+            <div id="pairingOptions"></div>
+            <button id="savePairings">Calculate</button>
+        </div>
+    </div>
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            This is an informational tool that visualises seat distributions in a future Senedd election under the new 
+            voting system and an expanded Senedd. This is a work-in-progress and will be updated and improved over the 
+            coming months. 
+            
+            When allocating seats, the tool makes several assumptions that should be noted. First, it uses estimates of
+            2021 vote share under the new constituency boundaries using Welsh Election Study data. This is not a definitive description of what the 2021 results would have 
+            looked like until the new electoral system and boundaries. Second, it assumes a uniform swing across all constituencies, which
+            may not be the case in a real election. 
+
+            If users have feedback or suggested improvements, or spot erros, please contact: larnerJM[at]cardiff.ac.uk 
+        </p>
+    </section>
+    <footer>
+        <p>Created by Jac M. Larner</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

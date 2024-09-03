@@ -12,7 +12,7 @@ const subConstituencies = [
 // Default constituency pairings 
 let constituencyPairings = [
     ["Alyn and Deeside", "Wrexham"],
-    ["Clwyd South", "Clwyd North"],
+    ["Clwyd East", "Clwyd North"],
     ["Bangor Aberconwy", "Ynys Môn"],
     ["Montgomeryshire and Glyndwr", "Dwyfor Meirionnydd"],
     ["Ceredigion Preseli", "Mid and South Pembrokeshire"],
